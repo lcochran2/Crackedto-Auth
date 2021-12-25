@@ -29,7 +29,7 @@ def auth() -> None:
         "hwid": hwid
     }
 
-    r = requests.post('https://cracked.to/auth.php', data=data)
+    r = requests.post('https://cracked.io/auth.php', data=data)
     if r.ok:
         res = r.json()
 
