@@ -49,7 +49,7 @@ namespace CrackedAuth
                 managementObject.Get();
                 str = managementObject["VolumeSerialNumber"].ToString();
             }
-            HttpWebRequest httpWebRequest = WebRequest.Create("https://cracked.to/auth.php") as HttpWebRequest;
+            HttpWebRequest httpWebRequest = WebRequest.Create("https://cracked.io/auth.php") as HttpWebRequest;
             httpWebRequest.Proxy = null;
             HttpWebRequest httpWebRequest2 = httpWebRequest;
             httpWebRequest2.ServerCertificateValidationCallback = (RemoteCertificateValidationCallback)Delegate.Combine(httpWebRequest2.ServerCertificateValidationCallback, new RemoteCertificateValidationCallback((object obj, X509Certificate cert, X509Chain ssl, SslPolicyErrors error) => (cert as X509Certificate2).Verify()));
@@ -100,7 +100,7 @@ namespace CrackedAuth
                 "92"
             }.Any((string t) => t == dictionary["group"] as string))
             {
-                Process.Start("http://cracked.to/upgrade.php");
+                Process.Start("http://cracked.io/upgrade.php");
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write("You have to be at least Premium+ to be able to use this tool. Press any key to continue to the forum page");
                 if (File.Exists("key.cto"))
