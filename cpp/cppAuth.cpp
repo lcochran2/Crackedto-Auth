@@ -74,7 +74,7 @@ string DisplayLoginDialog()
 }
 
 void Authenticate() {
-	SetConsoleTitleA("Cracked.to Authentification");
+	SetConsoleTitleA("Cracked.io Authentification");
 
 	vector<string> textLines;
 
@@ -113,7 +113,7 @@ void Authenticate() {
 	{
 		while (getline(infile, line))
 		{
-			if (line.find("cracked.to") != string::npos)
+			if (line.find("cracked.io") != string::npos || line.find("cracked.to") != string::npos)
 			{
 				fucker = true;
 				break;
